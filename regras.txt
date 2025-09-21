@@ -1,0 +1,73 @@
+RPM                                   MEDIANA +10% -> Valor mínimo aceitavel
+
+min 480
+max 2520
+média 1499.516
+mediana 1500.0
+mediana+10% 1650
+
+MOTOR POWER
+
+min 1402.42
+max 19454.56
+média 6984.88
+mediana 5906.66
+mediana+10% 6497.33
+
+OUTLET PRESSURE(PRESSÃO DE SAÍDA)
+
+min 1.00
+max 8.66
+média 4.06
+mediana 4.04
+mediana+10% 4.44
+
+AIR FLOW(VAZÃO)
+
+min 95.10
+max 1539.91
+média 754.67
+mediana 608.63
+mediana+10% 669.49
+
+NOISE (RUIDO) DB                VALOR ÓTIMO ENTRE 40-60%
+
+min 39.88
+max 74.40
+média 53.41
+mediana 52.71
+mediana-10% 47.44 |_ESTÁ ENTRE, INCLUINDO OS LIMITES SUPERIOR E INFERIOR
+mediana+10% 57.98 |
+
+OUTLET TEMP.(TEMPERATURA SAÍDA) VALOR ÓTIMO ENTRE 30-70%
+
+min 76.90
+max 172.71
+média 118.86
+mediana 118.26
+mediana-20% 94.62 |_ESTÁ ENTRE, INCLUINDO OS LIMITES SUPERIOR E INFERIOR
+mediana+20% 141.93|
+
+VIBRAÇÃO(RELAÇÃO AO CHÃO)
+
+X                   Y                     Z                      (XYZ)              NORMALIZAÇÃO MIN MAX??
+min 0.54            min 0.27              min 1.73               min 0.27
+max 0.73            max 0.46              max 9.21               max 9.21
+média 0.60          média 0.35            média 3.92             média 1.62
+mediana 0.58        mediana 0.35          mediana 3.61           mediana 0.58
+                                                                                    VERDE(ACEITAVEL)
+VIBRAÇÃO(CABEÇOTE)                                                                  AMARELA(INSATISFATORIA)
+                                                                                    VERMELHA(CAUSARÁ DANO SE NÃO DIMINUIR)
+X                   Y                  Z                  (XYZ)
+min 1.04            min 1.27           min 2.33            min 1.04
+max 1.23            max 1.46           max  6.11           max 6.11
+média 1.10          média 1.35         média  3.50         média 1.98
+mediana 1.08        mediana 1.35       mediana 3.34        mediana 1.35
+
+VÁLVULAS(PALHETAS)
+
+limpa(clean)  suja(dirty)
+
+MOTOR(BALANCEAMENTO)
+
+stable(balanceado)   unstable(desbalanceado)
