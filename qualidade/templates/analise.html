@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Análise de Compressor</title>
+</head>
+<body>
+    <h2>Consultar Status do Compressor</h2>
+
+    <form method="POST" action="{% url 'analise_compressor' %}">
+        {% csrf_token %} <label for="compressor_id">ID do Compressor (1 a 1000):</label>
+        <input type="number" id="compressor_id" name="compressor_id" required>
+        <button type="submit">Analisar</button>
+    </form>
+
+    <hr>
+
+    {% if resultado %}
+        <h3>Resultado da Análise para ID: {{ resultado.id }}</h3>
+        
+        <p>
+            <strong>STATUS DE QUALIDADE:</strong> 
+            <span style="font-weight: bold; color: {{ resultado.cor }};">
+                {{ resultado.status }}
+            </span>
+        </p>
+        
+        <p><strong>DIAGNÓSTICO:</strong> {{ resultado.diagnostico }}</p>
+        
+        <h4>Detalhes dos Parâmetros:</h4>
+        <ul>
+            {% for chave, valor in resultado.detalhes_parametros.items %}
+                <li>{{ chave }}: {{ valor }}</li>
+            {% endfor %}
+        </ul>
+        
+        {% if valores_referencia %}
+        <h4>Valores de Referência Utilizados:</h4>
+        <small>
+            <ul>
+                {% for chave, valor in valores_referencia.items %}
+                    <li>{{ chave }}: {{ valor }}</li>
+                {% endfor %}
+            </ul>
+        </small>
+        {% endif %}
+
+    {% endif %}
+
+</body>
+</html>
