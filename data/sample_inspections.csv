@@ -1,0 +1,6 @@
+id_peca,lote_producao,status,pressao,temperatura,observacoes
+1001,L001,ok,8,60,OK
+1002,L001,defeituoso,12,90,Vazamento detectado
+1003,L002,ok,9,70,OK
+1004,L003,defeituoso,11,75,Pressão levemente alta
+1005,L001,OK,8,60,OK

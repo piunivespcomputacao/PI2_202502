@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h3 class="mb-3">Cadastrar Nova Peça</h3>
+
+  {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+  {% if success %}
+    <div class="alert alert-success">{{ success }}</div>
+  {% endif %}
+
+  <form method="POST" class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">ID da Peça *</label>
+      <input type="text" name="id_peca" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Lote de Produção</label>
+      <input type="text" name="lote_producao" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Status</label>
+      <input type="text" name="status" class="form-control" placeholder="ok / defeituoso">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Pressão</label>
+      <input type="number" step="any" name="pressao" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Temperatura</label>
+      <input type="number" step="any" name="temperatura" class="form-control">
+    </div>
+    <div class="col-12">
+      <label class="form-label">Observações</label>
+      <textarea name="observacoes" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-success">Salvar Peça</button>
+      <a href="{{ url_for('index') }}" class="btn btn-link">Cancelar</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

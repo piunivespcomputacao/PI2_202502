@@ -1,0 +1,20 @@
+rules:
+  - name: pressao_alta
+    conditions:
+      - field: pressao
+        op: greater_than
+        value: 10
+    severity: high
+    cause: "Pressão acima do limite"
+    message: "Pressão acima do limite seguro."
+    action: "Parar equipamento e inspecionar."
+
+  - name: temperatura_alta
+    conditions:
+      - field: temperatura
+        op: greater_than
+        value: 80
+    severity: medium
+    cause: "Sobreaquecimento"
+    message: "Temperatura acima do permitido."
+    action: "Verificar ventilação e lubrificação."
